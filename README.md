@@ -88,8 +88,55 @@ actividad 8 con Api
 
 
 
+## CAPTURAS
+## API SIN LLAVE DE ACCESO RONDA 1 PELICULAS
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/aedcfa00-b542-4b3d-bfe2-2689c707ca32" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/76b34ef7-1333-43aa-9809-2f8bdb32b75d" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/11014f26-5753-484f-9578-582affab37b3" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/a53d6ed0-2db0-4a47-8fb6-471a99f37939" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/2152b7b5-6905-4195-a5ac-2657a578b6ab" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/dfc139e0-7d59-447e-897a-e2e59eb0a12d" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/9eb601e3-b19d-422c-ad2d-63baccfe7525" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/9a2a27d5-067a-4c8b-8fa5-3cca9214548f" />
 
+## RETO 1 VERDE
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/d2c8f681-2606-4407-b846-4e14224d4043" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/5c38cc04-5d27-4229-9503-8f63c8403a5a" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/9fab3984-7a80-4bc6-b779-03af9437c98d" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/37e0b681-b6ea-4683-8a25-dba4383010f1" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/c6643437-1483-4544-99fd-8d632375574c" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/a3f3fd59-5f4d-4d1e-a5cc-393acb517611" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/a71e8a33-e924-4708-b3c6-343ed5387d43" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/cba80484-118d-4445-9500-c001494cc3c7" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/86be946c-4cad-45d7-bd4e-451a1194cd3a" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/29f7772a-fd5b-4ad5-a29a-c3058582a46a" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/00b567e0-2d82-41f0-83bd-b4f8433286dd" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/a0421ecc-bf09-4e4e-a0a9-945d38397a17" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/f6cf16f0-50d4-4048-8aa3-a50b151ad54f" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/bb1b3872-3eb1-4546-b12c-b82fb27d8a95" />
 
+## RETO 2 MEMES GATOS
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/9cecb22a-695f-46d4-bbc3-f7374686fb83" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/601ae51f-dab6-405d-9995-9d5df3b491e7" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/cec2efb2-8666-467b-ac7d-cbc0f946f95e" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/4fa3dc7f-ebf4-44c6-86ad-14625062db8c" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/7e812a50-063c-430a-9fe1-b13584ced629" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/d5abfcd2-aaed-4a6d-be31-ab94bc93f4aa" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/b8f5f4c1-549b-40ae-983f-257229db3456" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/665cce50-d20a-4ad7-a9b6-38dac64f811f" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/d5f24c7e-69a4-476a-8d97-54afafa0638a" />
+
+## RETO 3 CLIMA 
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/d44b9610-61f5-4116-9a24-61dd1e16319a" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/46b60422-5961-4ea6-804b-748fc28cfee4" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/b8f13ca3-9c75-4896-a97d-8f83aadca167" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/10424e2a-0340-4ea5-8939-e568698f6cd0" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/4d2785b3-2c53-4dbe-a76f-ea9121d1883e" />
+
+## RETO 4 CRYPTO
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/01d80887-6093-4216-93b8-4428cfac854a" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/10c96979-89ef-48ab-9da3-447fe8ad981d" />
+<img width="739" height="1600" alt="image" src="https://github.com/user-attachments/assets/542f1503-ec7f-4856-91c9-c5e7eb5596fa" />
 
 
 
