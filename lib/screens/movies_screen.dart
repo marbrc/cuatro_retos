@@ -130,6 +130,7 @@ class _Poster extends StatelessWidget {
               width: width,
               height: width * 1.5,
               fit: BoxFit.cover,
+              webHtmlElementStrategy: WebHtmlElementStrategy.fallback,
               errorBuilder: (_, __, ___) => placeholder,
             ),
     );

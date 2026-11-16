@@ -1,13 +1,21 @@
+import 'package:http/http.dart' as http;
+
 import '../config/api_keys.dart';
 import '../models/weather.dart';
 import 'api_exception.dart';
 
 class WeatherService {
+  final http.Client? client;
+  final String openWeatherKey;
+
+  WeatherService({this.client, String? openWeatherKey})
+      : openWeatherKey = openWeatherKey ?? ApiKeys.openWeather;
+
   Future<Weather> fetchByCity(String city) async {
     final name = city.trim();
     if (name.isEmpty) throw ApiException('Escribe el nombre de una ciudad.');
 
-    if (ApiKeys.openWeather.isNotEmpty) {
+    if (openWeatherKey.isNotEmpty) {
       return _openWeather(name);
     }
     return _openMeteo(name);
@@ -17,11 +25,11 @@ class WeatherService {
   Future<Weather> _openWeather(String city) async {
     final url = Uri.https('api.openweathermap.org', '/data/2.5/weather', {
       'q': city,
-      'appid': ApiKeys.openWeather,
+      'appid': openWeatherKey,
       'units': 'metric',
       'lang': 'es',
     });
-    final json = await getJson(url) as Map<String, dynamic>;
+    final json = await getJson(url, client: client) as Map<String, dynamic>;
     return Weather.fromOpenWeather(json);
   }
 
@@ -34,7 +42,7 @@ class WeatherService {
       'count': '1',
       'language': 'es',
     });
-    final geo = await getJson(geoUrl) as Map<String, dynamic>;
+    final geo = await getJson(geoUrl, client: client) as Map<String, dynamic>;
     final results = geo['results'] as List?;
     if (results == null || results.isEmpty) {
       throw ApiException('No encontré la ciudad "$city".');
@@ -48,7 +56,7 @@ class WeatherService {
           'temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m',
       'timezone': 'auto',
     });
-    final json = await getJson(url) as Map<String, dynamic>;
+    final json = await getJson(url, client: client) as Map<String, dynamic>;
     return Weather.fromOpenMeteo(place['name'] as String, json);
   }
 }

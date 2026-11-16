@@ -56,6 +56,7 @@ class _CatsScreenState extends State<CatsScreen> {
                 _url,
                 key: ValueKey(_url), // si cambia la URL, recarga la imagen
                 fit: BoxFit.cover,
+                webHtmlElementStrategy: WebHtmlElementStrategy.fallback,
                 loadingBuilder: (_, child, progress) => progress == null
                     ? child
                     : const Center(child: LoadingView(label: 'Llamando al gato...')),

@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:http/http.dart' as http;
+
 import '../config/api_keys.dart';
 import '../models/movie.dart';
 import 'api_exception.dart';
@@ -24,8 +26,14 @@ const moods = <Mood>[
 class MovieService {
   static const _base = 'api.themoviedb.org';
 
+  final http.Client? client;
+  final String apiKey;
+
+  MovieService({this.client, String? apiKey})
+      : apiKey = apiKey ?? ApiKeys.tmdb;
+
   Future<List<Movie>> fetchByMood(Mood mood) async {
-    if (ApiKeys.tmdb.isEmpty) {
+    if (apiKey.isEmpty) {
       throw ApiException(
           'Falta tu API key de TMDB. Pégala en lib/config/api_keys.dart');
     }
@@ -34,13 +42,13 @@ class MovieService {
     if (mood.genreId == null) {
       // Endpoint de tendencias
       url = Uri.https(_base, '/3/trending/movie/week', {
-        'api_key': ApiKeys.tmdb,
+        'api_key': apiKey,
         'language': 'es-MX',
       });
     } else {
       // Endpoint "discover" filtrando por género, en una página al azar
       url = Uri.https(_base, '/3/discover/movie', {
-        'api_key': ApiKeys.tmdb,
+        'api_key': apiKey,
         'language': 'es-MX',
         'with_genres': '${mood.genreId}',
         'sort_by': 'popularity.desc',
@@ -48,7 +56,7 @@ class MovieService {
       });
     }
 
-    final json = await getJson(url) as Map<String, dynamic>;
+    final json = await getJson(url, client: client) as Map<String, dynamic>;
     final results = json['results'] as List;
     return results
         .map((e) => Movie.fromJson(e as Map<String, dynamic>))

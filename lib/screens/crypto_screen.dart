@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/coin.dart';
 import '../services/crypto_service.dart';
 import '../theme/app_theme.dart';
+import '../utils/convertidor.dart';
 import '../widgets/common.dart';
 
 class CryptoScreen extends StatefulWidget {
@@ -27,25 +28,13 @@ class _CryptoScreenState extends State<CryptoScreen> {
   void _refresh() => setState(() => _future = _service.fetchPrices());
 
   void _onAmountChanged(String value) {
-    // double.tryParse no truena si el texto no es número (regresa null)
-    setState(() => _usd = double.tryParse(value.replaceAll(',', '.')) ?? 0);
+    setState(() => _usd = Convertidor.leerMonto(value));
   }
 
   @override
   void dispose() {
     _amountCtrl.dispose();
     super.dispose();
-  }
-
-  String _money(double v) {
-    final parts = v.toStringAsFixed(2).split('.');
-    final digits = parts[0];
-    final buf = StringBuffer();
-    for (var i = 0; i < digits.length; i++) {
-      if (i > 0 && (digits.length - i) % 3 == 0) buf.write(',');
-      buf.write(digits[i]);
-    }
-    return '\$${buf.toString()}.${parts[1]}';
   }
 
   @override
@@ -89,7 +78,7 @@ class _CryptoScreenState extends State<CryptoScreen> {
               return Column(
                 children: [
                   for (final c in snap.data!) ...[
-                    _CoinRow(coin: c, usd: _usd, money: _money),
+                    _CoinRow(coin: c, usd: _usd),
                     const SizedBox(height: 10),
                   ],
                 ],
@@ -108,12 +97,11 @@ class _CryptoScreenState extends State<CryptoScreen> {
 class _CoinRow extends StatelessWidget {
   final Coin coin;
   final double usd;
-  final String Function(double) money;
-  const _CoinRow({required this.coin, required this.usd, required this.money});
+  const _CoinRow({required this.coin, required this.usd});
 
   @override
   Widget build(BuildContext context) {
-    final amount = coin.priceUsd == 0 ? 0.0 : usd / coin.priceUsd;
+    final amount = Convertidor.cuantoCompro(usd, coin.priceUsd);
     final up = coin.change24h >= 0;
 
     return Container(
@@ -144,7 +132,7 @@ class _CoinRow extends StatelessWidget {
                     style: const TextStyle(fontWeight: FontWeight.w600)),
                 const SizedBox(height: 2),
                 Text(
-                  '${money(coin.priceUsd)}  ${up ? '▲' : '▼'} ${coin.change24h.abs().toStringAsFixed(2)}%',
+                  '${Convertidor.dinero(coin.priceUsd)}  ${up ? '▲' : '▼'} ${coin.change24h.abs().toStringAsFixed(2)}%',
                   style: TextStyle(
                     fontSize: 12,
                     color: up ? AppColors.green : AppColors.red,

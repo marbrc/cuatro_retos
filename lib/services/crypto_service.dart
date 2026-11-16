@@ -1,7 +1,12 @@
+import 'package:http/http.dart' as http;
+
 import '../models/coin.dart';
 import 'api_exception.dart';
 
 class CryptoService {
+  final http.Client? client;
+  CryptoService({this.client});
+
   static const _coins = {
     'bitcoin': ['Bitcoin', 'BTC'],
     'ethereum': ['Ethereum', 'ETH'],
@@ -17,7 +22,7 @@ class CryptoService {
       'include_24hr_change': 'true',
     });
 
-    final json = await getJson(url) as Map<String, dynamic>;
+    final json = await getJson(url, client: client) as Map<String, dynamic>;
 
     return _coins.entries.map((e) {
       final data = json[e.key] as Map<String, dynamic>;
